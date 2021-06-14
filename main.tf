@@ -125,25 +125,25 @@ module "backup" {
 // ----------------------------------------------------------------------------
 // Setup all required Route 53 resources if External DNS / Cert Manager is enabled
 // ----------------------------------------------------------------------------
-module "dns" {
-  source                         = "./modules/dns"
-  apex_domain                    = var.apex_domain
-  subdomain                      = var.subdomain
-  tls_email                      = var.tls_email
-  enable_external_dns            = var.enable_external_dns
-  create_and_configure_subdomain = var.create_and_configure_subdomain
-  force_destroy_subdomain        = var.force_destroy_subdomain
-  enable_tls                     = var.enable_tls
-  production_letsencrypt         = var.production_letsencrypt
-  manage_apex_domain             = var.manage_apex_domain
-  manage_subdomain               = var.manage_subdomain
-}
+#module "dns" {
+#  source                         = "./modules/dns"
+#  apex_domain                    = var.apex_domain
+#  subdomain                      = var.subdomain
+#  tls_email                      = var.tls_email
+#  enable_external_dns            = var.enable_external_dns
+#  create_and_configure_subdomain = var.create_and_configure_subdomain
+#  force_destroy_subdomain        = var.force_destroy_subdomain
+#  enable_tls                     = var.enable_tls
+#  production_letsencrypt         = var.production_letsencrypt
+#  manage_apex_domain             = var.manage_apex_domain
+#  manage_subdomain               = var.manage_subdomain
+#}
 
-module "health" {
-  source               = "./modules/health"
-  is_jx2               = var.is_jx2
-  install_kuberhealthy = var.install_kuberhealthy
-}
+#module "health" {
+#  source               = "./modules/health"
+#  is_jx2               = var.is_jx2
+#  install_kuberhealthy = var.install_kuberhealthy
+#}
 
 module "nginx" {
   source                 = "./modules/nginx"
