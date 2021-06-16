@@ -577,10 +577,10 @@ variable "nginx_namespace" {
   description = "Name of the nginx namespace"
 }
 
-# variable "nginx_chart_version" {
-#   type        = string
-#   description = "nginx chart version"
-# }
+variable "nginx_chart_version" {
+  type        = string
+  description = "nginx chart version"
+}
 
 variable "create_nginx_namespace" {
   default     = true
