@@ -152,19 +152,19 @@ variable "vpc_name" {
 variable "public_subnets" {
   description = "The public subnet CIDR block to use in the created VPC"
   type        = list(string)
-  default     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  default     = ["10.200.1.0/24", "10.200.2.0/24", "10.200.3.0/24"]
 }
 
 variable "private_subnets" {
   description = "The private subnet CIDR block to use in the created VPC"
   type        = list(string)
-  default     = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
+  default     = ["10.200.4.0/24", "10.200.5.0/24", "10.200.6.0/24"]
 }
 
 variable "vpc_cidr_block" {
   description = "The vpc CIDR block"
   type        = string
-  default     = "10.0.0.0/16"
+  default     = "10.200.0.0/16"
 }
 
 variable "enable_nat_gateway" {
